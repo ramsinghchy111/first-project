@@ -1,1 +1,23 @@
-<p>dashboard works!</p>
+<div class="container">
+  <h2>Customer Loan Details</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Loan Holder ID</th>
+      <th>Name</th>
+      <th>Proposed Limit</th>
+      <th>Document Status</th>
+      <th>Customer Loan ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let loan of loanNames">
+      <td>{{loan?.loanHolderId}}</td>
+      <td>{{loan?.name}}</td>
+      <td>{{loan?.proposedLimit}}</td>
+      <td>{{loan?.documentStatus}}</td>
+      <td>{{loan?.customerLoanId}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
